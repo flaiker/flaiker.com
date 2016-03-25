@@ -119,8 +119,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Main Content -->
         <div class="content">
-          <iron-pages attr-for-selected="data-route" selected="{{route}}">
-            <section data-route="home" tabindex="-1">
+          <neon-animated-pages attr-for-selected="data-route" selected="{{route}}" entry-animation="slide-from-bottom-animation" exit-animation="fade-out-animation">
+            <neon-animatable data-route="home" tabindex="-1">
               <paper-material elevation="1">
                 <my-greeting></my-greeting>
 
@@ -152,9 +152,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </ul>
                 <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
               </paper-material>
-            </section>
+            </neon-animatable>
 
-            <section data-route="users" tabindex="-1">
+            <neon-animatable data-route="users" tabindex="-1">
               <paper-material elevation="1">
                 <h1 class="page-title" tabindex="-1">Users</h1>
                 <p>This is the users section</p>
@@ -163,22 +163,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
                 <a href$="{{baseUrl}}users/Sam">Sam</a>
               </paper-material>
-            </section>
+            </neon-animatable>
 
-            <section data-route="user-info" tabindex="-1">
+            <neon-animatable data-route="user-info" tabindex="-1">
               <paper-material elevation="-1">
                 <h1 class="page-title" tabindex="-1">User: {{params.name}}</h1>
                 <div>This is {{params.name}}'s section</div>
               </paper-material>
-            </section>
+            </neon-animatable>
 
-            <section data-route="contact" tabindex="-1">
+            <neon-animatable data-route="contact" tabindex="-1">
               <paper-material elevation="1">
                 <h1 class="page-title" tabindex="-1">Contact</h1>
                 <p>This is the contact section</p>
               </paper-material>
-            </section>
-          </iron-pages>
+            </neon-animatable>
+          </neon-animated-pages>
         </div>
       </paper-scroll-header-panel>
     </paper-drawer-panel>
